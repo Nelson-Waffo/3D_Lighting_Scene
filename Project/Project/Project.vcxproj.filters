@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\shaders">
+      <UniqueIdentifier>{5834f7d0-62dc-43ad-8fa4-312ca0a6846f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\textures">
+      <UniqueIdentifier>{a5eee55c-e242-4671-b424-fdac5cbc1f2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\resources">
+      <UniqueIdentifier>{223060c4-f4d8-4455-aab0-f821906d13fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\camera">
+      <UniqueIdentifier>{2e87af1c-5802-4a89-8cd4-e8b461ea1a2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\images">
+      <UniqueIdentifier>{5af63b01-66ab-4419-8b71-66e06b5088e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\model">
+      <UniqueIdentifier>{f16174d3-3d22-453f-b4da-bde48bd8631b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Source Files\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files\textures</Filter>
+    </ClCompile>
+    <ClCompile Include="stb_image.cpp">
+      <Filter>Source Files\textures</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Source Files\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="glad.c">
+      <Filter>Source Files\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="DataSource.cpp">
+      <Filter>Source Files\resources</Filter>
+    </ClCompile>
+    <ClCompile Include="garbage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Shader.h">
+      <Filter>Source Files\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Source Files\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Source Files\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="DataSource.h">
+      <Filter>Source Files\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh.h">
+      <Filter>Source Files\model</Filter>
+    </ClInclude>
+    <ClInclude Include="model.h">
+      <Filter>Source Files\model</Filter>
+    </ClInclude>
+    <ClInclude Include="Textures.h">
+      <Filter>Source Files\textures</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fragmentcube.shader">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+    <None Include="vertexcube.shader">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+    <None Include="vertexlight.shader">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+    <None Include="fragmentlight.shader">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+    <None Include="assimp-vc142-mtd.dll">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="vertexmodel.shader">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+    <None Include="fragmentmodel.shader">
+      <Filter>Source Files\shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="box.png">
+      <Filter>Source Files\images</Filter>
+    </Image>
+    <Image Include="agrass.png">
+      <Filter>Source Files\images</Filter>
+    </Image>
+    <Image Include="zgrass.png">
+      <Filter>Source Files\images</Filter>
+    </Image>
+    <Image Include="bgrass.jpg">
+      <Filter>Source Files\images</Filter>
+    </Image>
+    <Image Include="cgrass.jpg">
+      <Filter>Source Files\images</Filter>
+    </Image>
+    <Image Include="specular_map.png">
+      <Filter>Source Files\images</Filter>
+    </Image>
+    <Image Include="gold.jpg">
+      <Filter>Source Files\images</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

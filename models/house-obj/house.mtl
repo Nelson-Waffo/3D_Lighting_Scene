@@ -1,0 +1,81 @@
+# Blender MTL File: 'None'
+# Material Count: 8
+
+newmtl c9c9c9
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.788235 0.788235 0.788235
+Ks 0.009961 0.009961 0.009961
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl concreteMaterial
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.001176 0.001176 0.001176
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd concrete.jpg
+
+newmtl concrete_blockMaterial
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.933333 0.945098 0.976471
+Ks 0.020000 0.020000 0.020000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd concrete-block.jpg
+
+newmtl doorMaterial
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.001176 0.001176 0.001176
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd door.jpg
+
+newmtl french_doorsMaterial
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.001176 0.001176 0.001176
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd french doors.jpg
+
+newmtl tile_roofMaterial
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.001176 0.001176 0.001176
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd tile roof.jpg
+
+newmtl windowMaterial
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.001176 0.001176 0.001176
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd window.jpg
+
+newmtl wood_floorMaterial
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.001176 0.001176 0.001176
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd wood floor.jpg

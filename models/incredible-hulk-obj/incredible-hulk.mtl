@@ -1,0 +1,22 @@
+# Blender MTL File: 'None'
+# Material Count: 2
+
+newmtl HulkBody_Hulk_body_diff
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.045882 0.045490 0.045490
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Hulk_body_diff.jpg
+
+newmtl HulkHair_Hulk_hair_diff
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.010000 0.010000 0.010000
+Ni 1.000000
+d 0.000000
+illum 2
+map_Kd Hulk_hair_diff.jpg
