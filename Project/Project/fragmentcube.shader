@@ -90,7 +90,7 @@ vec3 calculateColor(Light light, vec3 normal, vec3 viewDirection)
         float theta = dot(lightDirection, normalize(-light.direction));
         // difference between the inner and outer cutoff angles
         float upsilon = light.cutoff - light.outercutoff;
-        // intensity value indicating whether or not a fragment should be lit: when its higher than 1
+        // intensity value indicating whether or not a fragment should be lit: when its higher than 0
         // the value gets clamped between 0 and 1
         float intensity = clamp((theta - light.outercutoff) / upsilon, 0.0, 1.0);
         // adapt it to the diffuse and specular components

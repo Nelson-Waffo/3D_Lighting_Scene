@@ -1,3 +1,12 @@
+/*3D Lighting Scene - The Genesis: In this scene, lighting effects are implemented on a surface.
+This includes: - Basic lighting: where ambient light, diffuse light and specular light are combined.
+               - Lighting maps: a diffuse map is used to set the diffuse color for each individual fragment. 
+			   a specular map to define the specular intensity for each part of an object. Wooden parts of an object have 
+			   no specular highlights, whilst steel part has stronger specular intensities.
+			   - Spotlight: a light which shoots light rays in a specific direction. the spot light has an inner and outer cone.
+			   the outer cone gradually dims the light from the inner cone to the edges of the outer cone.
+*/
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
@@ -16,6 +25,7 @@
 using namespace std;
 
 /*constants and global variables*/
+bool show_gun = true;
 //global path for models
 string path = "C:/Users/nelso/Documents/ComputerScience/Semester-7/Computer_Graphics/CG_Course_2020/Rehearsal_OpenGL/Scene3D/models";
 //global variables for rotations
@@ -67,7 +77,6 @@ void process_flashlight(GLFWwindow*, unsigned int, unsigned int);
 
 int main()
 {
-	cout << "everything is fine." << endl;
 	// initialise GLFW
 	GLFWwindow* window;
 	if (!initialise(window)) {
@@ -323,7 +332,6 @@ int main()
 		// display the flying plane
 		compute_model(model, glm::vec3(60.0, 30.0, 0.0), 75.0f, 0.0, 0.6, 0.6, 0.6, modelshader.ID, normalMatrix, true);
 		airplane.Draw(modelshader);
-		// player gun glm::vec3(0.0, -1.0, -2.0)
 
 		model = glm::mat4(1.0);
 		model = glm::rotate(model, glm::radians(0.0f), glm::vec3(0.0, 1.0, 0.0));
@@ -334,7 +342,7 @@ int main()
 		normalMatrix = glm::mat3(glm::transpose(glm::inverse(model)));
 		glUniformMatrix3fv(glGetUniformLocation(modelshader.ID, "normalMatrix"), 1, GL_FALSE, glm::value_ptr(normalMatrix));
 		//compute_model(model, camera.Position + glm::vec3(0.0, -1.0, 0.0) + camera.Front, 0.0f, 0.0, 0.025, 0.025, 0.025, modelshader.ID, normalMatrix, false);
-		gun.Draw(modelshader);
+		if(show_gun) gun.Draw(modelshader);
 
 		glUseProgram(0);
 		// double-buffering: the function which displays the image in the window
@@ -356,11 +364,11 @@ int main()
 {
 	 model = glm::mat4(1.0);
 	 
-	 if (swap) { // spin
+	 if (swap) { 
 		 model = glm::rotate(model, dir * (rotationSpeed) * (float)(glfwGetTime()) * glm::radians(angle), glm::vec3(bent, 1.0, 0.0));
 		 model = glm::translate(model, translation);
 	 }
-	 else { // circle
+	 else { 
 		 model = glm::translate(model, translation);
 		 model = glm::rotate(model, dir * (rotationSpeed) * (float)(glfwGetTime()) * glm::radians(angle), glm::vec3(bent, 1.0, 0.0));
 	 }
@@ -476,6 +484,7 @@ void process_camera(GLFWwindow* window)
 	// face the negative z axis by pressing T
 	else if (glfwGetKey(window, GLFW_KEY_T) == GLFW_PRESS) {
 		static float lastTime = 0;
+		show_gun = true;
 		// toggle the yaw value per request but every 3 seconds min
 		if (glfwGetTime() - lastTime > 3.0) {
 			angular = 0.0f;
@@ -487,6 +496,7 @@ void process_camera(GLFWwindow* window)
 	// when facing the negative z axis, press G to turn back
 	else if (glfwGetKey(window, GLFW_KEY_G) == GLFW_PRESS) {
 		static float lastTime = 0;
+		show_gun = true;
 		// toggle the yaw value per request but every 3 seconds min
 		if (glfwGetTime() - lastTime > 3.0) {
 			camera.Yaw = 90;
@@ -497,6 +507,7 @@ void process_camera(GLFWwindow* window)
 	// when facing the negative z axis, press H to turn right
 	else if (glfwGetKey(window, GLFW_KEY_H) == GLFW_PRESS) {
 		static float lastTime = 0;
+		show_gun = false;
 		// toggle the yaw value per request but every 3 seconds min
 		if (glfwGetTime() - lastTime > 3.0) {
 			camera.Yaw = 0;
@@ -507,6 +518,7 @@ void process_camera(GLFWwindow* window)
 	// when facing the negative z axis, press F to go left
 	else if (glfwGetKey(window, GLFW_KEY_F) == GLFW_PRESS) {
 		static float lastTime = 0;
+		show_gun = false;
 		// toggle the yaw value per request but every 3 seconds min
 		if (glfwGetTime() - lastTime > 3.0) {
 			camera.Yaw = 0;
@@ -534,7 +546,7 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos)
 	lastX = xpos;
 	lastY = ypos;
 
-	camera.ProcessMouseMovement(xoffset, yoffset);
+	// camera.ProcessMouseMovement(xoffset, yoffset);
 }
 
 // glfw: whenever the mouse scroll wheel scrolls, this callback is called

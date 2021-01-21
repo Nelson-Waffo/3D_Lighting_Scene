@@ -89,7 +89,6 @@ vec3 calculateLight(Light light, vec3 normal, vec3 viewingDirection)
     // calculate attenuation
     float distance = length(light.position - fragPos);
     float attenuation = 1.0 / (light.constant + light.lineare * distance + light.quadratic * distance * distance);
-    // attenuation = 1;
-    /* end of lighting map */
+
     return (attenuation * (ambient + diffuse + specular));
 }
